@@ -139,7 +139,7 @@ DWORD StdIoHandler::MonitorStdIn()
 
 
 NativeResp::NativeResp(int wsPort)
-    : err_code(Resp_Success), err_msg("success"), ws_port(wsPort), timestamp(currenttime())
+    : err_code(Resp_Success), err_msg("success"), ws_port(wsPort)
 {
 }
 NativeResp::NativeResp(int errCode, std::string errMsg)

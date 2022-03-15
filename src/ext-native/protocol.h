@@ -58,7 +58,6 @@ public:
     int err_code;
     int ws_port;
     std::string err_msg;
-    std::string timestamp;
     NativeResp(int wsPort);
     NativeResp(int errCode, std::string errMsg);
     std::string ToJson();
