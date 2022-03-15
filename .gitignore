@@ -1,0 +1,8 @@
+﻿/src/release/
+/src/*/release/
+/src/*/debug/
+/src/debug/
+/src/*/obj/
+/src/.vs/
+*.csproj.user
+/.vs
