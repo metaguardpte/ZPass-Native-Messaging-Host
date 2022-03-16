@@ -136,16 +136,11 @@ DWORD StdIoHandler::MonitorStdIn()
     return 0;
 }
 
-
-
-NativeResp::NativeResp(int wsPort)
-    : err_code(Resp_Success), err_msg("success"), ws_port(wsPort)
-{
-}
-NativeResp::NativeResp(int errCode, std::string errMsg)
-    : err_code(errCode), err_msg(errMsg), ws_port(0)
-{
-}
+NativeResp::NativeResp(int wsPort) : NativeResp(wsPort, "success", wsPort)
+{}
+NativeResp::NativeResp(int errCode, std::string errMsg, int wsPort)
+    : err_code(errCode), err_msg(errMsg), ws_port(wsPort)
+{}
 
 std::string NativeResp::ToJson()
 {

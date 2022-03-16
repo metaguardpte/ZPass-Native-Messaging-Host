@@ -4,5 +4,6 @@
 /src/debug/
 /src/*/obj/
 /src/.vs/
-*.csproj.user
+/src/*/*.user
+/src/*/*.filters
 /.vs
