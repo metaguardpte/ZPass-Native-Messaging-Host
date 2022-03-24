@@ -1,0 +1,12 @@
+{
+    "name": "chromium.extension.zpass",
+    "description": "Open the ZPass app",
+    "path": ".\\ext-native.exe",
+    "loglevel" : "debug",
+    "type": "stdio",
+    "allowed_origins": [
+        "chrome-extension://bffomgleicafeofjhcknecklfdcgncnf/",
+        "chrome-extension://pbbgnijngkodmbdejnjcpgienagjfgmn/",
+        "chrome-extension://gmfbcmpolfoehenbkhagaldpolpgbock/"
+    ]
+}

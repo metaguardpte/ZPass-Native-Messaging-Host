@@ -1,0 +1,6 @@
+enum
+{
+    EXT_ERR_SUCCESS = 0,
+    EXT_ERR_CREATE_PROCESS,
+    EXT_ERR_WRITE_PIPE,
+};

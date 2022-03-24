@@ -1,0 +1,20 @@
+1.Extension & ext-native:
+1.1. Request: Extension -> ext-native:
+Format: message_length[4byte] + message[message_length bytes]
+Message format(json):
+{
+    string action;  //required, mubut be "get-wss"
+    bool openApp;   //optional default false, whether need to open App
+    bool waitApp;   //optional default false, whether need to wait user openning App
+    long timestamp; //optional reserved for verification
+    string hash;    //optional reserved for verification
+}
+
+1.2. Response ext-native -> Extension:
+Format: message_length[4byte] + message[message_length bytes]
+Message format(json):
+{
+    int err_code;   // 0: success, other failed
+    int ws_port;    // websocket server port, valid when err_code is 0
+    string err_msg; // err description
+}
