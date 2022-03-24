@@ -58,6 +58,7 @@ public:
     int err_code;
     int ws_port;
     std::string err_msg;
+
     NativeResp() = delete;
     NativeResp(int wsPort);
     NativeResp(int errCode, std::string errMsg, int wsPort = 0);
