@@ -58,7 +58,7 @@ bool CLogger::Init()
     string strExeFile(m_vBuffer.data());
     m_strLogName = strExeFile.substr(strExeFile.find_last_of('\\') + 1) + ".log";
 
-    if (SUCCEEDED(SHGetFolderPathA(nullptr, CSIDL_LOCAL_APPDATA | CSIDL_FLAG_CREATE, nullptr, 0, m_vBuffer.data())))
+    if (SUCCEEDED(SHGetFolderPathA(nullptr, CSIDL_APPDATA | CSIDL_FLAG_CREATE, nullptr, 0, m_vBuffer.data())))
     {
         m_strLogPath.assign(m_vBuffer.data()).append("\\").append(Hubstudio::ProdName).append("\\logs");
         if (!filesystem::exists(m_strLogPath) && !filesystem::create_directories(m_strLogPath)) {
